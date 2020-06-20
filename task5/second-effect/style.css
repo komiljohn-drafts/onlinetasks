@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: #6a8a82;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(100px, auto);
+  margin: 20px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.grid__item-wrapper {
+  background-color: #282726;
+  color: #fff;
+  display: grid;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  place-items: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.grid__item-wrapper:hover {
+  background-color: #a7414a;
+}
+
+.grid__item-img {
+  margin-bottom: 10px;
+  position: relative;
+  max-width: 100px;
+}
+
+.grid__item-cow {
+  grid-column: span 2;
+}
+.grid__item-horse {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.grid__item-dog {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.grid__item-goose {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.grid__item-bee {
+  grid-column: span 2;
+  grid-row: span 1;
+}

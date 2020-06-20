@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, aquamarine, aqua);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__list {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-family: Cambria, sans-serif;
+  color: #333;
+}
+
+#marker {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: #000;
+  bottom: -8px;
+  transition: 0.5s;
+  border-radius: 4px;
+}

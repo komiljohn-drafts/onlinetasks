@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed effects of 2 examples above</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="marker"></div>
+        <div class="grid__item-wrapper grid__item-cow">
+            <div class="grid__item">
+                <img src="icons/png/001-cow.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">A fully grown female animal of a domesticated breed of ox, kept to
+                    produce milk or beef.</p>
+            </div>
+        </div>
+        <div class="grid__item-wrapper grid__item-horse">
+            <div class="grid__item">
+                <img src="icons/png/002-horse.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">A large plant-eating domesticated mammal with solid hoofs and a
+                    flowing mane and tail, used for riding, racing, and to carry and pull loads.</p>
+            </div>
+        </div>
+        <div class="grid__item-wrapper grid__item-rooster">
+            <div class="grid__item">
+                <img src="icons/png/003-rooster.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">An adult male chicken.</p>
+            </div>
+        </div>
+        <div class="grid__item-wrapper grid__item-dog">
+            <div class="grid__item">
+                <img src="icons/png/004-dog.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">A domesticated carnivorous mammal that typically has a long snout, an
+                    acute sense of smell, non-retractable claws, and a barking, howling, or whining voice.</p>
+            </div>
+        </div>
+        <div class="grid__item-wrapper grid__item-rabbit">
+            <div class="grid__item">
+                <img src="icons/png/005-rabbit.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">A gregarious burrowing plant-eating mammal, with long ears, long hind
+                    legs, and a short tail.</p>
+            </div>
+        </div>
+        <div class="grid__item-wrapper grid__item-goose">
+            <div class="grid__item">
+                <img src="icons/png/006-goose.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">A large waterbird with a long neck, short legs, webbed feet, and a
+                    short broad bill. Generally geese are larger than ducks and have longer necks and shorter bills.</p>
+            </div>
+        </div>
+        <div class="grid__item-wrapper grid__item-bee">
+            <div class="grid__item">
+                <img src="icons/png/007-bee.png" alt="" class="grid__item-img">
+                <p class="grid__item-description">A stinging winged insect which collects nectar and pollen, produces
+                    wax and honey, and lives in large communities.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const marker = document.getElementById('marker');
+    const item = document.querySelectorAll('.grid__item-wrapper');
+
+    function indicator(e) {
+        marker.style.left = e.offsetLeft + "px";
+        marker.style.width = e.offsetWidth + "px";
+        marker.style.height = e.offsetHeight + "px";
+        marker.style.top = e.offsetTop + "px";
+        marker.style.left = e.offsetLeft + "px";
+    }
+
+    item.forEach(link => {
+        link.addEventListener('click', e => {
+            console.log(e.target);
+            if (e.target.closest('.grid__item-wrapper'))
+                indicator(link);
+        })
+    })
+</script>
+
+</html>
+
+<!-- More examples and inspiring videos on https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog  -->

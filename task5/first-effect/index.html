@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Animated Sliding Menu Indicator using Html CSS & Vanilla Javascript | Magic Line Indicator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav__list">
+            <div id="marker"></div>
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Team</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+</body>
+
+<script>
+    const marker = document.getElementById('marker');
+    const item = document.querySelectorAll('.nav__link');
+
+    function indicator(e) {
+        marker.style.left = e.offsetLeft + "px";
+        marker.style.width = e.offsetWidth + "px";
+    }
+
+    item.forEach(link => {
+        link.addEventListener('click', e => {
+            indicator(e.target);
+        })
+    })
+</script>
+
+</html>
+
+<!-- More examples and inspiring videos on https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog  -->
